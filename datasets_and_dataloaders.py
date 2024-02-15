@@ -75,7 +75,7 @@ class CustomImageDataset(Dataset):
         return len(self.img_labels)
 
     # loads and returns a sample based on the input index
-    # first find the image location on disk, convert it to a tensor, and retrives corresponding label
+    # first find the image location on disk, convert it to a tensor, and retrieves corresponding label
     # sample and label are finally return in as a pair in a tuple
     def __getitem__(self, idx):
         img_path = os.path.join(self.img_dir, self.img_labels.iloc[idx, 0])
